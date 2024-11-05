@@ -1,5 +1,5 @@
 # cse210-ww-student-template
-GABRIELA G. MUNHOZ
+GABRIELA G. MUNHOZ | Applied Technology Student
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
