@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class PromptGenerator
 {
-    // List of prompts for journal entries
+    // List of prompts for journal entries 
     public List<string> _prompts = new List<string>
     {
         "Who was the most interesting person I interacted with today?",

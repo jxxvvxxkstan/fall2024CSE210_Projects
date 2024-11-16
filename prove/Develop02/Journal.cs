@@ -30,7 +30,7 @@ public class Journal
         File.WriteAllText(file, json);
     }
 
-    // Load journal entries from a file in JSON format
+    // Load journal entries from a file in JSON format 
     public void LoadFromFile(string file)
     {
         if (File.Exists(file))

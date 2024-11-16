@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create instances of Journal and PromptGenerator
+        // Create instances of Journal and PromptGenerator 
         Journal journal = new Journal();
         PromptGenerator promptGenerator = new PromptGenerator();
         bool running = true;
