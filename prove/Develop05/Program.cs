@@ -1,9 +1,30 @@
-using System;
-
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        while (true)
+        {
+            Console.WriteLine("Choose an activity:");
+            Console.WriteLine("1. Box Breathing Activity");
+            Console.WriteLine("2. Reflecting Activity");
+            Console.WriteLine("3. Listing Activity");
+            Console.WriteLine("4. Quit");
+
+            int choice = int.Parse(Console.ReadLine());
+            if (choice == 4)
+            {
+                break;
+            }
+
+            Activity activity = choice switch
+            {
+                1 => new BreathingActivity(),
+                2 => new ReflectingActivity(),
+                3 => new ListingActivity(),
+                _ => null
+            };
+
+            activity?.Run();
+        }
     }
 }
