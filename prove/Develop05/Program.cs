@@ -4,6 +4,7 @@ class Program
     {
         while (true)
         {
+            Console.Clear(); // Clear the console at the start of each iteration
             Console.WriteLine("Choose an activity:");
             Console.WriteLine("1. Box Breathing Activity");
             Console.WriteLine("2. Reflecting Activity");
@@ -25,6 +26,9 @@ class Program
             };
 
             activity?.Run();
+
+            // Clear the console after each activity
+            Console.Clear();
         }
     }
 }

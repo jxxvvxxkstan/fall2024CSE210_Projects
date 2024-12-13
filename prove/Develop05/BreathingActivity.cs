@@ -13,11 +13,11 @@ public class BreathingActivity : Activity
             Console.WriteLine("Breathe in...");
             ShowCountDown(4);
             Console.WriteLine("Hold...");
-            ShowCountDown(4);
+            ShowInterval(4);
             Console.WriteLine("Breathe out...");
             ShowCountDown(4);
             Console.WriteLine("Hold...");
-            ShowCountDown(4);
+            ShowInterval(4);
             secondsPassed += 16; // Each cycle takes 16 seconds
         }
 
@@ -35,14 +35,14 @@ public class BreathingActivity : Activity
                 Console.WriteLine("Breathe in...");
                 ShowCountDown(4);
                 Console.WriteLine("Hold...");
-                ShowCountDown(remainingSeconds - 4);
+                ShowInterval(remainingSeconds - 4);
             }
             else if (remainingSeconds <= 12)
             {
                 Console.WriteLine("Breathe in...");
                 ShowCountDown(4);
                 Console.WriteLine("Hold...");
-                ShowCountDown(4);
+                ShowInterval(4);
                 Console.WriteLine("Breathe out...");
                 ShowCountDown(remainingSeconds - 8);
             }
@@ -51,14 +51,24 @@ public class BreathingActivity : Activity
                 Console.WriteLine("Breathe in...");
                 ShowCountDown(4);
                 Console.WriteLine("Hold...");
-                ShowCountDown(4);
+                ShowInterval(4);
                 Console.WriteLine("Breathe out...");
                 ShowCountDown(4);
                 Console.WriteLine("Hold...");
-                ShowCountDown(remainingSeconds - 12);
+                ShowInterval(remainingSeconds - 12);
             }
         }
 
         DisplayEndingMessage();
+    }
+
+    private void ShowInterval(int seconds)
+    {
+        for (int i = 0; i < seconds; i++)
+        {
+            Console.Write(".");
+            Thread.Sleep(1000);
+        }
+        Console.WriteLine();
     }
 }

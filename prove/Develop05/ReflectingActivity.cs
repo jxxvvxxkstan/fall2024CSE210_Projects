@@ -33,16 +33,22 @@ public class ReflectingActivity : Activity
     {
         DisplayStartingMessage();
         Random rand = new Random();
-        Console.WriteLine(_prompts[rand.Next(_prompts.Count)]);
-        ShowSpinner(5);
 
-        int secondsPassed = 5;
-        while (secondsPassed < _duration)
+        int promptsToShow = Math.Min(3, _duration / 10); // Show up to 3 prompts, adjusting for the duration
+        for (int i = 0; i < promptsToShow; i++)
         {
-            Console.WriteLine(_questions[rand.Next(_questions.Count)]);
+            Console.WriteLine(_prompts[rand.Next(_prompts.Count)]);
             ShowSpinner(5);
-            secondsPassed += 5;
+
+            int secondsPassed = 5;
+            while (secondsPassed < (_duration / promptsToShow))
+            {
+                Console.WriteLine(_questions[rand.Next(_questions.Count)]);
+                ShowSpinner(5);
+                secondsPassed += 5;
+            }
         }
+
         DisplayEndingMessage();
     }
 }
