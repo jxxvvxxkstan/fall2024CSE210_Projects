@@ -8,7 +8,7 @@ public class BreathingActivity : Activity
     {
         DisplayStartingMessage();
         int secondsPassed = 0;
-        while (secondsPassed + 16 <= _duration) // Each cycle now takes 16 seconds (4+4+4+4)
+        while (secondsPassed + 16 <= _duration)
         {
             Console.WriteLine("Breathe in...");
             ShowCountDown(4);
@@ -69,6 +69,7 @@ public class BreathingActivity : Activity
             Console.Write(".");
             Thread.Sleep(1000);
         }
+        Console.Write("\b \b"); // Clear the last dot character
         Console.WriteLine();
     }
 }

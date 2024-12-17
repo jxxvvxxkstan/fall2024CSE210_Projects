@@ -31,10 +31,11 @@ public class ListingActivity : Activity
             if (Console.KeyAvailable)
             {
                 items.Add(Console.ReadLine());
+                secondsPassed += 2; // Approximate time spent for each entry
             }
             else
             {
-                ShowSpinner(1);
+                Thread.Sleep(1000);
                 secondsPassed++;
             }
         }

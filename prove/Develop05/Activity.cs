@@ -42,6 +42,7 @@ public abstract class Activity
             Thread.Sleep(250);
             Console.Write("\b");
         }
+        Console.Write("\b \b"); // Clear the last spinner character
         Console.WriteLine();
     }
 

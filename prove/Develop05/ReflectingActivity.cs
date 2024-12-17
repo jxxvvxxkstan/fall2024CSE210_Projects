@@ -51,4 +51,22 @@ public class ReflectingActivity : Activity
 
         DisplayEndingMessage();
     }
+
+    public new void ShowSpinner(int seconds)
+    {
+        for (int i = 0; i < seconds; i++)
+        {
+            Console.Write("/");
+            Thread.Sleep(250);
+            Console.Write("\b-");
+            Thread.Sleep(250);
+            Console.Write("\b\\");
+            Thread.Sleep(250);
+            Console.Write("\b|");
+            Thread.Sleep(250);
+            Console.Write("\b");
+        }
+        Console.Write("\b \b");
+        Console.WriteLine();
+    }
 }
